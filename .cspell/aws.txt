@@ -1,0 +1,6 @@
+awsglue
+amazonaws
+gule
+glueetl
+datacatalog
+cloudwatch

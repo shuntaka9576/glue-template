@@ -1,0 +1,18 @@
+exclude = [".venv"]
+target-version = "py312"
+
+[lint]
+select = [
+    "E", # pycodestyle
+    "F", # Pyflakes
+    "W", # pycodestyle
+    "I", # isort
+    "Q", # flake8-quotes
+    "C90", # mccabe
+    "T20", # flake8-print
+    "UP" # pyupgrade
+]
+fixable = ["ALL"]
+ignore = [
+    "E501",
+]

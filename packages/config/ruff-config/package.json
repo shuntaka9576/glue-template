@@ -1,0 +1,7 @@
+{
+  "name": "@glue-template/ruff-config",
+  "scripts": {
+    "check": "echo 'no settings'",
+    "fix": "echo 'no settings'"
+  }
+}

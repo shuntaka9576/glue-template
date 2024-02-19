@@ -1,0 +1,46 @@
+{
+  "ignorePaths": [
+    "./packages/iac/test/__snapshots__/"
+  ],
+  "dictionaries": [
+    "typescript",
+    "node",
+    "python"
+  ],
+  "words": [
+    "DDCB"
+  ],
+  "languageSettings": [
+    {
+      "languageId": "*",
+      "dictionaries": [
+        "aws",
+        "python",
+        "spark",
+        "node"
+      ],
+      "dictionaryDefinitions": [
+        {
+          "name": "aws",
+          "path": "./.cspell/aws.txt",
+          "addWords": false
+        },
+        {
+          "name": "python",
+          "path": "./.cspell/python.txt",
+          "addWords": false
+        },
+        {
+          "name": "node",
+          "path": "./.cspell/node.txt",
+          "addWords": false
+        },
+        {
+          "name": "spark",
+          "path": "./.cspell/spark.txt",
+          "addWords": false
+        }
+      ]
+    }
+  ]
+}

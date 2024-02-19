@@ -1,0 +1,6 @@
+mapreduce
+fileoutputcommitter
+mapreduce
+fileoutputcommitter
+marksuccessfuljobs
+sasl

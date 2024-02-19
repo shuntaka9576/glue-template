@@ -1,0 +1,40 @@
+name: CI iac
+
+on:
+  push:
+    paths:
+      - 'packages/iac/**'
+      - '.github/workflows/ci-iac.yml'
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: ./.node-version
+
+      - name: Restore node modules
+        uses: actions/cache@v4
+        id: cache_dependency
+        env:
+          cache-name: cache-dependency
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('package-lock.json') }}
+
+      - name: Install node modules
+        if: ${{ steps.cache_dependency.outputs.cache-hit != 'true' }}
+        run: npm ci --no-audit --progress=false --silent
+
+      - name: CI
+        shell: bash
+        run: |
+          npm run check \
+            -w @glue-template/iac
+          npm run test \
+            -w @glue-template/iac

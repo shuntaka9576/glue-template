@@ -1,0 +1,1 @@
+extend = "../config/ruff-config/ruff.toml"

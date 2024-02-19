@@ -1,0 +1,9 @@
+{
+  "name": "@glue-template/biome-config",
+  "scripts": {
+    "check": "run-p check:*",
+    "check:format": "npx @biomejs/biome format .",
+    "check:lint": "npx @biomejs/biome lint .",
+    "fix": "npx @biomejs/biome format . --write"
+  }
+}

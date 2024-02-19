@@ -1,0 +1,16 @@
+{
+  "name": "@glue-template/src-glue",
+  "scripts": {
+    "deps": "rye sync",
+    "check": "run-s check:*",
+    "check:format": "rye format --check",
+    "check:lint": "rye lint",
+    "check:spell": "cspell lint . --cache --gitignore",
+    "fix": "run-s fix:*",
+    "fix:format": "rye format",
+    "fix:lint": "rye lint --fix -- --unsafe-fixes",
+    "build": "run-s build:*",
+    "build:source": "./run_build.sh",
+    "test": "./run_test.sh"
+  }
+}

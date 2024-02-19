@@ -1,0 +1,17 @@
+boto
+pyspark
+pytest
+ulimits
+nofile
+jupyterlab
+pythonpath
+testpaths
+localstack
+venv
+pycodestyle
+Pyflakes
+pycodestyle
+isort
+mccabe
+pyupgrade
+setuptools

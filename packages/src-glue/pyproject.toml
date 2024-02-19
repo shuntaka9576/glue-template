@@ -1,0 +1,16 @@
+[project]
+name = "src-glue"
+version = "0.0.0"
+description = ""
+authors = []
+dependencies = []
+requires-python = ">= 3.8"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+lock-with-sources = true
+
+[tool.pytest.ini_options]
+pythonpath = "."
+testpaths = ["tests"]

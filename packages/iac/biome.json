@@ -1,0 +1,4 @@
+{
+  "extends": ["../config/biome-config/biome.json"],
+  "formatter": {}
+}

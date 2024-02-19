@@ -1,0 +1,7 @@
+{
+  "extends": "@glue-template/tsconfig/cjs",
+  "compilerOptions": {
+    "types": ["vitest/globals"],
+    "skipLibCheck": true
+  }
+}

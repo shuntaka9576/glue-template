@@ -1,0 +1,15 @@
+{
+  "name": "@glue-template/py-tool",
+  "scripts": {
+    "deps": "rye sync",
+    "check": "run-s check:*",
+    "check:format": "rye format --check",
+    "check:lint": "rye lint",
+    "check:spell": "cspell lint . --cache --gitignore",
+    "fix": "run-s fix:*",
+    "fix:format": "rye format",
+    "fix:lint": "rye lint --fix -- --unsafe-fixes",
+    "start": "rye run python ./src/main.py",
+    "test": "rye run pytest"
+  }
+}

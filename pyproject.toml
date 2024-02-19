@@ -1,0 +1,25 @@
+[project]
+name = "glue-template"
+version = "0.1.0"
+description = "sample glue job"
+authors = []
+dependencies = []
+requires-python = ">= 3.8"
+
+[tool.setuptools]
+py-modules = []
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+lock-with-sources = true
+
+[tool.rye.workspace]
+members = [
+  "packages/src-glue",
+  "packages/py-tool"
+]
+
+[tool.pytest.ini_options]
+pythonpath = "."
+testpaths = ["tests"]
