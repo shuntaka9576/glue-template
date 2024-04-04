@@ -22,6 +22,12 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: Adjutment docker volumes
+        run: |
+          docker system df -v
+          docker system prune -a --volumes -f
+          docker system df -v
+
       - name: Cache a GlueLib Docker image
         id: cache-python-packages
         uses: actions/cache@v4
@@ -41,6 +47,8 @@ jobs:
 
       - name: lunch container
         run: |
+          docker system df -v
+
           cd packages/src-glue/
           docker-compose up -d
 
